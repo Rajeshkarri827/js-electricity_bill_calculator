@@ -1,8 +1,10 @@
 document.getElementById("calculator").addEventListener("submit", function(event) {
     event.preventDefault();
 
-    let units = Number(document.getElementById("units").value);
+    let units_p = (document.getElementById("units").value);
     let price = 0;
+    units = parseFloat(units_p);
+    console.log(units);
 
     if (units < 0) {
         document.getElementById("result").innerText = "Please enter a valid number of units.";
